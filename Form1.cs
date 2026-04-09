@@ -64,10 +64,11 @@ namespace BurgerKiosk
             }
             if (!rdoHamBurger.Checked && !rdoBulgogiBurger.Checked 
                                             && !rdoChickenBurger.Checked) 
-            { 
-                MessageBox.Show("메뉴를선택하세요."); 
-                return; 
+            {
+                lblError.Visible = true;
+                return;
             }
+            lblError.Visible = false;
             lblTotalCost.Text = "총금액 : " + totalCost.ToString("N0") + " 원";
         }   
             

@@ -43,10 +43,11 @@
             grpMenu = new GroupBox();
             grpOption = new GroupBox();
             grpOrder = new GroupBox();
-            lstOrder = new ListBox();
             lblTotalCost = new Label();
+            lstOrder = new ListBox();
             btnOrder = new Button();
             btnReset = new Button();
+            lblError = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -230,14 +231,6 @@
             grpOrder.TabStop = false;
             grpOrder.Text = "주문 내역";
             // 
-            // lstOrder
-            // 
-            lstOrder.FormattingEnabled = true;
-            lstOrder.Location = new Point(21, 46);
-            lstOrder.Name = "lstOrder";
-            lstOrder.Size = new Size(233, 214);
-            lstOrder.TabIndex = 0;
-            // 
             // lblTotalCost
             // 
             lblTotalCost.AutoSize = true;
@@ -248,12 +241,20 @@
             lblTotalCost.TabIndex = 1;
             lblTotalCost.Text = "총 금액 : 0원";
             // 
+            // lstOrder
+            // 
+            lstOrder.FormattingEnabled = true;
+            lstOrder.Location = new Point(21, 46);
+            lstOrder.Name = "lstOrder";
+            lstOrder.Size = new Size(233, 214);
+            lstOrder.TabIndex = 0;
+            // 
             // btnOrder
             // 
             btnOrder.BackColor = SystemColors.ActiveCaption;
             btnOrder.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
             btnOrder.ForeColor = Color.Black;
-            btnOrder.Location = new Point(803, 407);
+            btnOrder.Location = new Point(803, 447);
             btnOrder.Name = "btnOrder";
             btnOrder.Size = new Size(106, 46);
             btnOrder.TabIndex = 2;
@@ -266,7 +267,7 @@
             btnReset.BackColor = Color.IndianRed;
             btnReset.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
             btnReset.ForeColor = Color.Black;
-            btnReset.Location = new Point(930, 407);
+            btnReset.Location = new Point(930, 447);
             btnReset.Name = "btnReset";
             btnReset.Size = new Size(106, 46);
             btnReset.TabIndex = 3;
@@ -274,11 +275,24 @@
             btnReset.UseVisualStyleBackColor = false;
             btnReset.Click += btnReset_Click;
             // 
+            // lblError
+            // 
+            lblError.AutoSize = true;
+            lblError.Font = new Font("맑은 고딕", 12F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            lblError.ForeColor = Color.Red;
+            lblError.Location = new Point(803, 423);
+            lblError.Name = "lblError";
+            lblError.Size = new Size(144, 21);
+            lblError.TabIndex = 15;
+            lblError.Text = "메뉴를 선택하세요";
+            lblError.Visible = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1112, 583);
+            Controls.Add(lblError);
             Controls.Add(btnReset);
             Controls.Add(grpOrder);
             Controls.Add(btnOrder);
@@ -320,5 +334,6 @@
         private ListBox lstOrder;
         private Button btnOrder;
         private Button btnReset;
+        private Label lblError;
     }
 }
