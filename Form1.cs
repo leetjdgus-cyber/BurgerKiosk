@@ -74,13 +74,17 @@ namespace BurgerKiosk
 
         private void btnReset_Click(object sender, EventArgs e)
         {
+            totalCost = 0;
             rdoHamBurger.Checked = false;
             rdoBulgogiBurger.Checked = false; 
             rdoChickenBurger.Checked = false; chkFries.Checked = false; 
             chkCoke.Checked = false; 
             chkCheese.Checked = false; 
             chkSauce.Checked = false; 
-            lstOrder.Items.Clear(); lblTotalCost.Text = "총 금액 : 0원";
+            lstOrder.Items.Clear(); 
+            lblTotalCost.Text = "총 금액 : 0원";
+            
+
         }
     }
 }
