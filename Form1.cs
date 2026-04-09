@@ -68,7 +68,7 @@ namespace BurgerKiosk
                 MessageBox.Show("메뉴를선택하세요."); 
                 return; 
             }
-            lblTotalCost.Text = "총금액: " + totalCost + "원";
+            lblTotalCost.Text = "총금액 : " + totalCost.ToString("N0") + " 원";
         }   
             
 
