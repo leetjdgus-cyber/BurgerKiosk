@@ -61,7 +61,7 @@
             lblAppName.AutoSize = true;
             lblAppName.Font = new Font("맑은 고딕", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
             lblAppName.ForeColor = Color.IndianRed;
-            lblAppName.Location = new Point(385, 9);
+            lblAppName.Location = new Point(390, 9);
             lblAppName.Name = "lblAppName";
             lblAppName.Size = new Size(344, 50);
             lblAppName.TabIndex = 0;
